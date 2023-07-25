@@ -8,15 +8,6 @@ export default function Home() {
   const [request, setRequest] = useState<{days?: string, city?: string}>({})
   let [itinerary, setItinerary] = useState<string>('')
 
-  useEffect(() => {
-    checkRedirect()
-  }, [])
-
-  function checkRedirect() {
-    if (window.location.hostname === 'gpt-travel-advisor.vercel.app') {
-      window.location.replace('https://www.roamaround.io/')
-    }
-  }
 
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
